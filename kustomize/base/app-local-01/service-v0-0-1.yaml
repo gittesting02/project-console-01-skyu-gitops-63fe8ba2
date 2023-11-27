@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: app-local-01
+    applicationId: app_241f8c64-7576-43f0-a016-06f5e1cb1ba2
+    version: v0.0.1
+  name: app-local-01
+spec:
+  selector:
+    app: app-local-01
