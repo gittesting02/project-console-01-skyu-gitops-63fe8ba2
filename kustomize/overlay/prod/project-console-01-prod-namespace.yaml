@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: project-console-01-prod
+  labels:
+    environment-id: env_2040d4c9-1185-4722-abcb-88941e3df9fe
+    project-id: project_ed1339d0-eb8f-4689-928f-cbc356826314
+    project-name: project-console-01
+    environment-name: prod
+    organization-id: org_c2a5c30e-de81-4d82-84d0-8627af8bcc64
