@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts:
+        - port: 13
+          targetPort: 123
+          protocol: TCP
+      healthChecks: []
+      name: fghfgh-main
+      imagePullPolicy: Always
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: fghfgh
+    version: v0.0.1
+    applicationId: app_cb943cd9-ad58-473c-a4a2-c1065941221d
+    projectId: project_ed1339d0-eb8f-4689-928f-cbc356826314
+    organizationId: org_c2a5c30e-de81-4d82-84d0-8627af8bcc64
+    environmentId: env_2040d4c9-1185-4722-abcb-88941e3df9fe
+    environmentName: prod
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: fghfgh
+  cronTab: ''
+  serviceType: ClusterIP
+  namespace: project-console-01-prod
