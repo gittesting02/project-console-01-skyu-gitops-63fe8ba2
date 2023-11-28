@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: console-test-app
+    applicationId: app_6dc3cbe2-c662-46b5-b847-9f62e3bbf23f
+    version: v0.0.1
+  name: console-test-app
+spec:
+  selector:
+    app: console-test-app

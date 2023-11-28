@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: console-test-app
+  labels:
+    app: console-test-app
+    applicationId: app_6dc3cbe2-c662-46b5-b847-9f62e3bbf23f
+    version: v0.0.1
+spec:
+  selector:
+    matchLabels:
+      app: console-test-app
+  template:
+    metadata:
+      labels:
+        app: console-test-app
