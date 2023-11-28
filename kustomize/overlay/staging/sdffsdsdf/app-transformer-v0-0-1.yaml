@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts:
+        - port: 123
+          targetPort: 123
+          protocol: UDP
+      healthChecks: []
+      name: sdffsdsdf-main
+      imagePullPolicy: Always
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: sdffsdsdf
+    version: v0.0.1
+    applicationId: app_3015eb84-2dec-467b-b9cb-32f15b0179b4
+    projectId: project_ed1339d0-eb8f-4689-928f-cbc356826314
+    organizationId: org_c2a5c30e-de81-4d82-84d0-8627af8bcc64
+    environmentId: env_b2e9fc14-d62d-4ae7-ad89-fd9cfe4a5b0d
+    environmentName: staging
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: sdffsdsdf
+  cronTab: ''
+  serviceType: ClusterIP
+  namespace: project-console-01-staging
