@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app-02
+  labels:
+    app: test-app-02
+    applicationId: app_21a02854-1c0e-48fc-a131-c15dc61f715b
+    version: v0.0.1
+spec:
+  selector:
+    matchLabels:
+      app: test-app-02
+  template:
+    metadata:
+      labels:
+        app: test-app-02
