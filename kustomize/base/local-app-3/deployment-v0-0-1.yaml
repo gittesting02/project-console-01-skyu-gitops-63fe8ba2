@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local-app-3
+  labels:
+    app: local-app-3
+    applicationId: app_84e3c460-d085-429f-9815-d1aa06466098
+    version: v0.0.1
+spec:
+  selector:
+    matchLabels:
+      app: local-app-3
+  template:
+    metadata:
+      labels:
+        app: local-app-3
