@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app-34
+  labels:
+    app: test-app-34
+    applicationId: app_c27eba9c-e8e3-4c21-bb84-0699bbd085b3
+    version: v0.0.1
+spec:
+  selector:
+    matchLabels:
+      app: test-app-34
+  template:
+    metadata:
+      labels:
+        app: test-app-34
