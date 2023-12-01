@@ -9,17 +9,15 @@ metadata:
 spec:
   applicationContainers:
     - imageTag: latest
-      cpuRequestMili: 100
-      cpuLimitMili: 150
+      cpuRequestMili: 2100
+      cpuLimitMili: 2100
       memoryRequestMb: 350
-      memoryLimitMb: 450
+      memoryLimitMb: 1411
       args: []
-      command: []
+      command:
+        - hellow
       configMounts: []
-      applicationPorts:
-        - port: 123
-          targetPort: 12313
-          protocol: TCP
+      applicationPorts: []
       healthChecks: []
       name: test-app-34-main
       imagePullPolicy: Always
