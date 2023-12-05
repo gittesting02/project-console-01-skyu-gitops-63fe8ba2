@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-ns
+  labels:
+    environment-id: env_0cffcc22-e5cf-4663-91fa-56e07c51ad63
+    project-id: project_ed1339d0-eb8f-4689-928f-cbc356826314
+    project-name: project-console-01
+    environment-name: test
+    organization-id: org_c2a5c30e-de81-4d82-84d0-8627af8bcc64
