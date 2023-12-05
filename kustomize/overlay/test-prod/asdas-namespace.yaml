@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: asdas
+  labels:
+    environment-id: env_ee75f8a4-ea2a-4073-b2a7-d4d923b0ea3c
+    project-id: project_ed1339d0-eb8f-4689-928f-cbc356826314
+    project-name: project-console-01
+    environment-name: test-prod
+    organization-id: org_c2a5c30e-de81-4d82-84d0-8627af8bcc64
